@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 class Node{
@@ -19,7 +18,7 @@ class DoubleLinkedList{
         }
         void addNode(){
             int nim;
-            string nm;
+            string nim;
             cout << "\nEnter the roll number of the student";
             cin >> nim;
             Node *newNode = new Node();
@@ -44,12 +43,33 @@ class DoubleLinkedList{
             if (current -> next != NULL && nim == current -> next -> noMhs){
                 cout << "\noDuplicate roll number no allowed" << endl;
                 return;
-        }
-        newNode -> next = current -> next;
+            }
+            newNode -> next = current -> next;
             newNode -> prev = current;
 
             if(current -> next != NULL){  
                 current -> next -> prev = newNode;
             }
             current -> next = newNode;
-}
+        }
+        
+        current -> next = newNode;
+    }
+
+    void hapus(){
+        if (START == NULL){
+            cout << '\n List is empty'<< endl;
+            return;
+        }
+        cout << "\nEnter Number You Want To Delete: ";
+        int rollNo;
+        cin >> rollNo;
+
+        Node *current = START;
+
+        while (current != NULL && current -> noMhs != rollNo)
+        {
+            current = current -> next;
+        }
+    }
+        
