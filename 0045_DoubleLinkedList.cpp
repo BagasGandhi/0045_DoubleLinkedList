@@ -189,3 +189,8 @@ int main(){
         default:
             cout << "Invalid Option\n";
         }
+        cout << "\n Press enter tp countinue...";
+        cin.ignore();
+        cin.get();
+        cout << endl;
+        system("clear");
