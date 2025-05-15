@@ -29,7 +29,20 @@ class DoubleLinkedList{
                     cout << '\nDuplicate number no alloewd';
                     return;
                 }
-                
+                newNode -> next = START;
+                if(START != NULL){
+                    START -> prev = newNode;
+                }
+                newNode -> prev = NULL;
+                START = newNode;
+                return;
             }
+            Node *current = START;
+            while(cuttrnt -> next != NULL && current->next->prev->noMhs < nim){
+                current = current -> next;
+            }
+            if (current -> next != NULL && nim == current -> next -> noMhs){
+                cout << "\noDuplicate roll number no allowed" << endl;
+                return;
         }
 }
