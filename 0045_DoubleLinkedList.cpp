@@ -166,3 +166,26 @@ int main(){
         cout << "6. exit\n"; 
         cout << "Enter The Number: ";
         cin >> choice;
+
+        switch (choice)
+        {
+        case '1':
+            list.addNode();
+            break;
+        case '2':
+            list.hapus();
+            break;
+        case '3':
+            list.traverse();
+            break;
+        case '4':
+            list.revTraverse();
+            break;
+        case '5':
+            list.searchData();
+            break;
+        case '6':
+            return 0;
+        default:
+            cout << "Invalid Option\n";
+        }
