@@ -85,3 +85,43 @@ class DoubleLinkedList{
                 current -> next -> prev = current -> prev;
             }
         } 
+        delete current;
+        cout << "Record With roll number " << rollNo << "deleted" << endl;
+    }
+
+    void traverse(){
+        if (START == NULL){
+            cout << "\n Lisy is Empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+
+        cout << "\nRecord in ascending order of roll number are: \n";
+        int i =0;
+        while (currentNode != NULL){
+            cout << i + 1 << ". " << currentNode -> noMhs << " " << endl;
+
+            currentNode = currentNode -> next;
+            i++;
+        }
+    }
+
+    void revTraverse(){
+        if(START == NULL){
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        Node *currentNode = START;
+        int i = 0;
+        while (currentNode -> next != NULL){
+            currentNode = currentNode -> next;
+            i++;
+        }
+
+        cout << "\nRecord in descending order of roll number are: \n";
+        while (currentNode != NULL){
+            cout << i + 1 << ". " << currentNode -> noMhs << " " << endl;
+            currentNode = currentNode -> prev;
+            i++;
