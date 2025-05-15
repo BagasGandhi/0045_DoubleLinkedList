@@ -125,3 +125,29 @@ class DoubleLinkedList{
             cout << i + 1 << ". " << currentNode -> noMhs << " " << endl;
             currentNode = currentNode -> prev;
             i++;
+        }
+    }
+
+    void searchData(){
+        if (START == NULL){
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        Node *current = START;
+
+        while (current != NULL && current -> noMhs != rollNo){
+            current = current -> next;
+        }
+        if (current == NULL){
+            cout << "Record Not Found\n";
+        }else{
+            cout << "Record Found\n";
+            cout << "Roll Member: " << current -> noMhs << endl;
+        }
+    }
+};
