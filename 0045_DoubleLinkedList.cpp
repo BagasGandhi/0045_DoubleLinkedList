@@ -166,5 +166,3 @@ int main(){
         cout << "6. exit\n"; 
         cout << "Enter The Number: ";
         cin >> choice;
-
-        
