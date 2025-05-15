@@ -37,7 +37,7 @@ class DoubleLinkedList{
                 return;
             }
             Node *current = START;
-            while(cuttrnt -> next != NULL && current->next->prev->noMhs < nim){
+            while(current -> next != NULL && current->next->prev->noMhs < nim){
                 current = current -> next;
             }
             if (current -> next != NULL && nim == current -> next -> noMhs){
@@ -194,3 +194,5 @@ int main(){
         cin.get();
         cout << endl;
         system("clear");
+    } while (choice != '6');
+};
