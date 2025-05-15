@@ -52,10 +52,7 @@ class DoubleLinkedList{
             }
             current -> next = newNode;
         }
-        
-        current -> next = newNode;
-    }
-
+ 
     void hapus(){
         if (START == NULL){
             cout << '\n List is empty'<< endl;
@@ -71,5 +68,20 @@ class DoubleLinkedList{
         {
             current = current -> next;
         }
-    }
-        
+    
+        if (current == NULL){
+            cout << "Record Not Found" << endl;
+            return;
+        }
+
+        if (current == START){
+            START = current -> next;
+            if (START != NULL){
+                START -> prev = NULL;
+            }
+        }else{
+            current -> prev -> next = current -> next;
+            if (current -> next != NULL){
+                current -> next -> prev = current -> prev;
+            }
+        } 
